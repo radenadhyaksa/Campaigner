@@ -184,4 +184,23 @@ class PostsController extends Controller
         $post->delete();
         return redirect('/posts')->with('success', 'Post Removed');
     }
-}
+    
+
+
+        public function donasi($id)
+        {
+            $post = Post::find($id);
+
+            // Check for correct user
+           // if(auth()->user()->id !==$posts->user_id){
+            //}
+
+
+            return view('posts.donate')->with('post', $post);
+        }
+
+        public function payment($id)
+        {
+            
+        }
+    }
