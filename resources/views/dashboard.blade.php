@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+<!-- ini komentar -->
+
 @section('content')
 <div class="container">
     <div class="row">
@@ -16,7 +18,7 @@
                                 <th>Title</th>
                                 <th></th>
                                 <th></th>
-                            </tr>
+                            </tr> 
                             @foreach($posts as $post)
                                 <tr>
                                     <td>{{$post->title}}</td>
