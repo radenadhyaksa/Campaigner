@@ -14,16 +14,20 @@
     <small>Written on {{$post->created_at}} by {{$post->user->name}}</small>
     
     <hr>
-    @if(!Auth::guest())
-    <a href="/posts/{{$post->id}}/donasi" class="btn btn-default">Donate</a>
+    
 
         @if(Auth::user()->id == $post->user_id)
-            <a href="/posts/{{$post->id}}/edit" class="btn btn-default">Edit</a>
+            <a href="/posts/{{$post->id}}/edit" class="btn btn-default pull-left">Edit</a>
 
-            {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST', 'class' => 'pull-right'])!!}
+        @if(!Auth::guest())
+            <a href="/posts/{{$post->id}}/donasi" class="btn btn-danger pull-right">DONASI</a>
+            
+
+            {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST'])!!}
                 {{Form::hidden('_method', 'DELETE')}}
-                {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                {{Form::submit('Delete', ['class' => 'btn btn-default'])}}
             {!!Form::close()!!}
+
         @endif
     @endif
 @endsection
