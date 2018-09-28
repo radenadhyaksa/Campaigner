@@ -4000,9 +4000,9 @@ fieldset[disabled] a.btn {
 }
 
 .btn-default {
-  color: #636b6f;
-  background-color: #fff;
-  border-color: #ccc;
+  color: #ffffff;
+  background-color: rgb(10, 110, 128);
+  border-color: rgb(1, 11, 20);
 }
 
 .btn-default:focus,
@@ -4013,9 +4013,9 @@ fieldset[disabled] a.btn {
 }
 
 .btn-default:hover {
-  color: #636b6f;
-  background-color: #e6e5e5;
-  border-color: #adadad;
+  color: #d7dbdd;
+  background-color: rgb(7, 79, 92);
+  border-color: #000000;
 }
 
 .btn-default:active,
